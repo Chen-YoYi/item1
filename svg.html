@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Mrbool.com - HTML5 Tutorials</title>
+</head>
+
+<body>
+    <h2>HTML5 SVG Line Example</h2>
+    <svg id="svgLineTutorial" style="border-style:solid;border-width:2px;" height="200px" width="200px"
+        xmlns="http://www.w3.org/2000/svg">
+        <!--<line x1="0" y1="0" x2="50" y2="200" style="stroke:rgb(100,100,0);stroke-width:5"/>-->
+        <!-- 线条标签 -->
+        <line x1="10" y1="20" x2="100" y2="200" style="stroke:Green;stroke-width:2" />
+    </svg>
+
+    <h2>HTML5 SVG Circle Example</h2>
+    <svg id="svgCircleTutorial" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- 圆形标签 -->
+        <circle id="myCircle" cx="55" cy="55" r="50" fill="#219E3E" stroke="#17301D" stroke-width="2" />
+    </svg>
+
+
+    <h2>HTML5 SVG Rectangle Example</h2>
+    <!-- <svg></svg>: 根标签 -->
+    <!-- xmlns  : 可定义SVG 的命名空间 -->
+    <!-- x /y : 设置距离定义矩形的左侧/顶部的位置 -->
+    <!-- rx /ry : 可使矩形产生圆角 -->
+    <!-- cx /cy : 定义圆点的x /y 坐标  默认(0,0)-->
+    <!-- r : 定义圆的半径 -->
+    <!-- width /height :设置svg 文档 的宽高 -->
+    <!-- version : 定义所使用的SVG版本 -->
+    <!-- stroke  : 轮廓颜色-->
+    <!-- stroke-width ： 轮廓大小  不带单位 -->
+    <!-- stroke-opacity ：轮廓的颜色透明度 -->
+    <!-- fill : 填充颜色 -->
+    <!-- fill-opacity ： 填充颜色的透明度-->
+    <svg id="svgRectangleTutorial" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- 矩形标签 -->
+        <rect id="myrectangle" width="200" height="100" x="10" y="20" rx="50" ry="20" stroke="#17310D" stroke-width="2"
+            fill="#0e4E75" fill-opacity="0.5" stroke-opacity="0.5" />
+    </svg>
+
+
+
+    <h2>HTML5 SVG Ellipse Example</h2>
+    <svg id="svgEllipseTutorial" height="300" xmlns="http://www.w3.org/2000/svg">
+        <!-- 椭圆标签 -->
+        <!-- cx属性定义的椭圆中心的x坐标 -->
+        <!-- cy属性定义的椭圆中心的y坐标 -->
+        <!-- rx属性定义的水平半径 -->
+        <!-- ry属性定义的垂直半径 -->
+        <ellipse id="myEllipse" cx="180" cy="100" rx="100" ry="50"
+            style="fill:#3f5208; stroke: balck; stroke-width: 3;" />
+    </svg>
+
+
+    <h2>HTML5 SVG Polygon Example</h2>
+    <svg id="svgPolygonTutorial" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- points  :  定义多边形每一个角的X 和 Y  的坐标-->
+        <polygon id="myPolygon" points="10 ,10 75 ,150 150, 180 170 ,60"
+            style="fill: #63bbc6; stroke:#333; stroke-width: 2;" />
+
+        <!-- SVG的图形填充规则 通过 fill-rule 属性来指定
+        属性名 ： fill-rule  
+        用于指定使用哪一种算法去判断画布上的某区域是否属于该图形“内部” （内部区域将被填充）。
+        对一个简单的无交叉的路径，
+        哪块区域是“内部” 是很直观清除的。
+        但是，对一个复杂的路径，
+        比如自相交或者一个子路径包围另一个子路径，
+        “内部”的理解就不那么明确了。
+        fill-rule 属性提供两种选项用于指定如何判断图形的“内部”: -->
+    </svg>
+
+
+    <h2>HTML5 SVG Path Example</h2>
+    <!-- 下面的例子创建了一个二次方贝塞尔曲线，A 和 C 分别是起点和终点，B 是控制点： -->
+    <svg xmlns="http://www.w3.org/2000/svg" height="400" width="600" version="1.1">
+        <path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="3" fill="none" />
+        <path id="lineBC" d="M 250 50 l 150 300" stroke="red" stroke-width="3" fill="none" />
+        <path d="M 175 200 l 150 0" stroke="green" stroke-width="3" fill="none" />
+        <path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+        <!-- 标记的小圆点 -->
+        <g stroke="black" stroke-width="3" fill="black">
+            <circle id="pointA" cx="100" cy="350" r="3" />
+            <circle id="pointB" cx="250" cy="50" r="3" />
+            <circle id="pointC" cx="400" cy="350" r="3" />
+        </g>
+        <!-- ABC标记点 -->
+        <g font-size="30" font="sans-serif" fill="black" stroke="none" text-anchor="middle">
+            <text x="100" y="350" dx="-30">A</text>
+            <text x="250" y="50" dy="-10">B</text>
+            <text x="400" y="350" dx="30">C</text>
+        </g>
+    </svg>
+
+
+    <h2>HTML5 SVG Text Example</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <!-- defs 标签 -->
+        <defs>
+            <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+        </defs>
+        <text x="10" y="100" style="fill:red;">
+            <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+        </text>
+    </svg>
+
+</body>
+
+</html>
